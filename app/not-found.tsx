@@ -1,7 +1,7 @@
-"use client";
+import { usePathname } from "next/navigation";
 import React from "react";
 const notFound = () => {
-  const pathName = window.location.pathname;
+  const pathName = usePathname();
   return (
     <div className="">
       <p>
