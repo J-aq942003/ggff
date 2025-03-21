@@ -1,0 +1,1 @@
+sass --watch shared/scss:shared/styles
