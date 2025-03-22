@@ -10,7 +10,7 @@ const EventCard = () => {
     >
       <div className="flex border-2ff min-h-fullff flex-col gap-7ff rounded-2xl rounded-tl-2xlff">
         <div className="border-2ff border-blue-700 relative">
-          <Image src={img} alt="" className="max-h-[50vw]ff" />
+          <Image src={img} alt="" className="max-h-[50vw]ff cursor-pointer" />
           <div className="border-2ff border-black max-w-fit absolute top-2 right-2">
             <CardEdit />
           </div>
@@ -28,7 +28,9 @@ const EventCard = () => {
             <p className="text-gray-500 font-semibold text-sm">
               Fri, Dec 15, 7:00 AM
             </p>
-            <h3 className="font-bold text-sm">React Day Berlin</h3>
+            <h3 className="font-bold text-sm cursor-pointer">
+              React Day Berlin
+            </h3>
             <footer className="text-sm">Fraizan | JS Mastery</footer>
           </div>
         </div>
