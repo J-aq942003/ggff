@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import axios from "axios";
+import EventCard from "@/components/shared/utilities/EventCard";
 
 // const GetFun = async () => {
 //   await new Promise((resolve) => setTimeout(resolve, 200));
@@ -27,10 +28,11 @@ export default async function Home() {
   return (
     <>
       <section className="borderff border-black mb-8 pt-16 min-h-[500px]ff w-full bg-primary-50 bg-dotted-pattern bg-cover bg-fixed bg-center">
-        <div className="wrapper grid grid-cols-1 gap-5 sm:grid-cols-2 2xl:gap-0 border border-black w-[96%] mx-auto">
+        <div className="wrapper grid grid-cols-1 gap-5 sm:grid-cols-2 2xl:gap-0 borderff border-black w-[96%] mx-auto">
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold text-[2.0rem] borderff border-black max-w-[610px]">
-              Host, Connect, Celebrate: Your Events, Our Platform! {/*todos.title*/}
+              Host, Connect, Celebrate: Your Events, Our Platform!{" "}
+              {/*todos.title*/}
             </h1>
             <p className="borderff p-regular-20 md:p-regular-24 maxf-w-[580px]">
               Book and learn helpful tips{" "}
@@ -59,7 +61,7 @@ export default async function Home() {
         id="events"
         className="wrapper my-8 mt-0 flex flex-col gap-8 md:gap-12"
       >
-        <h3 className="h3-bold mb-4ff sm:max-w-[18rem]ff border-2">
+        <h3 className="h3-bold mb-4ff sm:max-w-[18rem]ff border-2ff">
           Trusted by <br />
           Thousand of Events
         </h3>
@@ -87,6 +89,15 @@ export default async function Home() {
               </SelectGroup>
             </SelectContent>
           </Select>
+        </div>
+        <div
+          dir="rtl"
+          className="grid gap-8 grid-cols-1 items-center xs:grid-cols-2 sm:grid-cols-3 md:grid-cols lg:grid-cols-4 border-2ff min-h-64"
+        >
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
         </div>
       </section>
     </>

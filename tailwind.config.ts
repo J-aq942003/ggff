@@ -18,6 +18,9 @@ module.exports = withUt({
       },
     },
     extend: {
+      screens: {
+        xs: "450px",
+      },
       colors: {
         primary: {
           500: "#624CF5",
