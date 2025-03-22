@@ -4,7 +4,7 @@ import axios from "axios";
 import React from "react";
 
 const page = async ({ params }: { params: { id: string } }) => {
-  const user = (
+  /*const user = (
     await axios.get(
       "https://api.clerk.com/v1/users/user_2uTc8v92jtEFHC8qKmMXjQz3EAL",
       {
@@ -14,12 +14,12 @@ const page = async ({ params }: { params: { id: string } }) => {
         },
       }
     )
-  ).data;
+  ).data;*/
   // console.log(user.first_name);
   return (
     <div>
       <div className="max-w-[400px] border-2 border-black ">
-        Events page {/*JSON.stringify(user)*/ params.id}
+        Events page {/*JSON.stringify(user)*/ /*params.id*/}
       </div>
     </div>
   );

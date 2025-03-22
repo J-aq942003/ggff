@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import logo from "../public/assets/images/logo.svg";
+// import logo from "../public/assets/images/logo.svg";
 import {
   ClerkProvider,
   SignInButton,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Evently",
   description: "Evently is a platform for event management.",
   icons: {
-    icon: logo,
+    icon: "/favicon.ico",
   },
 };
 

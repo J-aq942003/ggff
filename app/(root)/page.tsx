@@ -15,22 +15,22 @@ import {
 } from "@/components/ui/select";
 import axios from "axios";
 
-const GetFun = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 200));
-  return Math.random();
-};
+// const GetFun = async () => {
+//   await new Promise((resolve) => setTimeout(resolve, 200));
+//   return Math.random();
+// };
 export default async function Home() {
-  const todos = await (
+  /*const todos = await (
     await axios.get("https://jsonplaceholder.typicode.com/todos/2")
   ).data;
-  console.log("Home + " + JSON.stringify(todos));
+  console.log("Home + " + JSON.stringify(todos));*/
   return (
     <>
       <section className="borderff border-black mb-8 pt-16 min-h-[500px]ff w-full bg-primary-50 bg-dotted-pattern bg-cover bg-fixed bg-center">
         <div className="wrapper grid grid-cols-1 gap-5 sm:grid-cols-2 2xl:gap-0 border border-black w-[96%] mx-auto">
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold text-[2.0rem] borderff border-black max-w-[610px]">
-              Host, Connect, Celebrate: Your Events, Our Platform! {todos.title}
+              Host, Connect, Celebrate: Your Events, Our Platform! {/*todos.title*/}
             </h1>
             <p className="borderff p-regular-20 md:p-regular-24 maxf-w-[580px]">
               Book and learn helpful tips{" "}
