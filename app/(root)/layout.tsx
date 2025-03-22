@@ -6,7 +6,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       id="root-pages-div"
-      className="flex relative flex-col border-2 min-h-screen border-blue-700"
+      className="flex relative flex-col border-2ff min-h-screen border-blue-700"
     >
       <NavBar />
       {children}

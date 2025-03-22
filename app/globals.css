@@ -79,7 +79,7 @@ body {
 }
 
 body * {
-  border: none;
+  /* border: none; */
 }
 
 .filter-grey {

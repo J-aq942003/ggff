@@ -38,7 +38,7 @@ export default function RootLayout({
             {/* <link rel="icon" href="./favicon.ico" type="image/x-icon" /> */}
           </head>
           <body
-            className={`${poppins.variable} border-2 min-h-screen border-red-500`}
+            className={`${poppins.variable} border-2ff min-h-screen border-red-500`}
           >
             {children}
           </body>
