@@ -165,7 +165,9 @@ const EventForm = ({
               setStartDate(date as Date);
             }}
             showTimeSelect
-            className="bg-transparent w-full outline-none text-sm"
+            /*I put in the className below the text[16px] class for mobiles,
+             Because in mobiles when the font size is under the 16px the screen will zoom in when you press on the in inputs*/
+            className="bg-transparent w-full outline-none text-[16px]"
             placeholderText="Start Date"
           />
         </InputWithIcon>
@@ -183,7 +185,9 @@ const EventForm = ({
               setEndDate(date as Date);
             }}
             showTimeSelect
-            className={`bg-transparent w-full outline-none text-sm ${
+            /*I put in the className below the text[16px] class for mobiles,
+             Because in mobiles when the font size is under the 16px the screen will zoom in when you press on the in inputs*/
+            className={`bg-transparent w-full outline-none text-[16px] ${
               !startDate ? "cursor-not-allowed" : null
             }`}
             placeholderText="End Date"
