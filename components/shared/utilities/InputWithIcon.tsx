@@ -21,7 +21,7 @@ const InputWithIcon = ({
   typeInput,
 }: InputProps) => {
   return (
-    <div className="flex items-center gap-2 w-full rounded-3xl p-2 pr-3 bg-gray-200">
+    <div className="flex items-center gap-2 w-full rounded-3xl p-2 pr-3 bg-gray-200 *:text-[16px]">
       <Image
         src={icon}
         alt=""

@@ -106,7 +106,7 @@ const EventForm = ({
         <Input
           type="text"
           placeholder="Title"
-          className="w-full rounded-full md:max-w-[30rem]ff"
+          className="w-full text-[16px] rounded-full md:max-w-[30rem]ff"
         />
         <Select>
           <SelectTrigger className="rounded-full bg-gray-100 sm:w-[180px]ff">
@@ -132,10 +132,10 @@ const EventForm = ({
           </SelectContent>
         </Select>
       </div>
-      <div className="wrapper grid gap-5 border-2 sm:grid-cols-2 md:">
+      <div className="wrapper grid gap-5 border-2 sm:grid-cols-2 md: *:text-[16px]">
         <Textarea
           placeholder="Description"
-          className="min-h-[17rem] rounded-xl"
+          className="min-h-[17rem] text-[16px] rounded-xl"
         />
         <div className="border-2ff border-black">
           {files.length == 0 ? (
@@ -145,7 +145,7 @@ const EventForm = ({
           )}
         </div>
       </div>
-      <div className="wrapper">
+      <div className="wrapper text-[16px]">
         <InputWithIcon placeHolder="Event location or Online" />
       </div>
 
