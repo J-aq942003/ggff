@@ -1,3 +1,4 @@
+"use client";
 import { UploadDropzone } from "@uploadthing/react";
 
 import { OurFileRouter } from "../../../app/api/uploadthing/core";
