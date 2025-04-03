@@ -10,7 +10,10 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-
+import dotenv from "dotenv";
+import FixedReturnToTop from "@/components/shared/utilities/FixedReturnToTop";
+/////////
+dotenv.config();
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -38,8 +41,9 @@ export default function RootLayout({
             {/* <link rel="icon" href="./favicon.ico" type="image/x-icon" /> */}
           </head>
           <body
-            className={`${poppins.variable} border-2ff min-h-screen border-red-500`}
+            className={`${poppins.variable} border-2ff relative min-h-screen border-red-500`}
           >
+            <FixedReturnToTop />
             {children}
           </body>
         </html>

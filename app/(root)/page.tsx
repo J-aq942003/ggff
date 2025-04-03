@@ -75,7 +75,7 @@ export default async function Home() {
             className="rounded-full max-w-[400px]ff outline-none"
           />
           <Select>
-            <SelectTrigger className="rounded-full bg-gray-100 sm:w-[180px]">
+            <SelectTrigger className="rounded-full bg-gray-100 sm:w-[12rem]">
               <SelectValue placeholder="Category" />
             </SelectTrigger>
             <SelectContent>
@@ -94,6 +94,15 @@ export default async function Home() {
           dir="rtl"
           className="grid gap-8 grid-cols-1 items-center xs:grid-cols-2 sm:grid-cols-3 md:grid-cols lg:grid-cols-4 border-2ff min-h-64"
         >
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
           <EventCard />
           <EventCard />
           <EventCard />

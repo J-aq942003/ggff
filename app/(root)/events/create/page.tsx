@@ -1,16 +1,15 @@
 import EventForm from "@/components/shared/utilities/EventForm";
-import { useParams } from "next/navigation";
 import React from "react";
 
-const UpdateEventPage = ({ params }: { params: string }) => {
+const CreteEventPage = () => {
   return (
     <main className="flex flex-col items-center w-screen border-2 border-green-600 bg-primary-50 bg-dotted-pattern bg-cover bg-fixed bg-center">
       <div className="flex flex-col items-center border-2 border-yellow-200 w-[90%]">
-        <h3 className="h3-bold mb-16 mt-6">Update Event {params && ""}</h3>
+        <h3 className="h3-bold mb-16 mt-6">Create Event</h3>
         <EventForm userId={""} type="Create" />
       </div>
     </main>
   );
 };
 
-export default UpdateEventPage;
+export default CreteEventPage;

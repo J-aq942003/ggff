@@ -17,9 +17,9 @@ function NavItems() {
         Home
       </Link>
       <Link
-        href="/events"
+        href="/events/create"
         className={`${
-          pathName == "/events" ? "active-nav" : ""
+          pathName == "/events/create" ? "active-nav" : ""
         } hover:text-blue-400 transition-all duration-100`}
       >
         Create Event
