@@ -3,7 +3,7 @@ import React from "react";
 
 const CreteEventPage = () => {
   return (
-    <main className="flex flex-col items-center w-screen border-2 border-green-600 bg-primary-50 bg-dotted-pattern bg-cover bg-fixed bg-center">
+    <main className="flex flex-col items-center w-screen border-2 border-green-600 bg-primary-50 bg-dotted-pattern bg-cover bg-fixed bg-center pb-12">
       <div className="flex flex-col items-center border-2 border-yellow-200 w-[90%]">
         <h3 className="h3-bold mb-16 mt-6">Create Event</h3>
         <EventForm userId={""} type="Create" />

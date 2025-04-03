@@ -16,7 +16,9 @@ import { startTransition, useState } from "react";
 
 export function AlertDialogDemo() {
   const [newCategory, setNewCategory] = useState("");
-  const addNewCategoryHandler = () => {};
+  const addNewCategoryHandler = () => {
+    window.location.href = window.location.pathname;
+  };
   return (
     <>
       <AlertDialog>
@@ -41,7 +43,8 @@ export function AlertDialogDemo() {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction
               onClick={(e) => {
-                startTransition(addNewCategoryHandler);
+                // startTransition(addNewCategoryHandler);
+                addNewCategoryHandler();
               }}
             >
               Add

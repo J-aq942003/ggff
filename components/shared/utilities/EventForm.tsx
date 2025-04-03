@@ -28,6 +28,13 @@ import { eventFormSchema } from "@/lib/validator";
 import { eventDefaultValues } from "@/constants";
 import DropDown from "./DropDown";
 import FileUploader from "./FileUploader";
+import { AlertDialogTrigger } from "@radix-ui/react-alert-dialog";
+import { AlertDialogDemo } from "./AlertDialog";
+import InputWithIcon from "./InputWithIcon";
+import calender from "@/public/assets/icons/date-svgrepo-com.svg";
+import DatePicker from "react-datepicker";
+import priceIcon from "@/public/assets/icons/dollar-sign-money-svgrepo-com.svg";
+import urlIcon from "@/public/assets/icons/link-svgrepo-com (2).svg";
 /////////
 
 const EventForm = ({
@@ -39,6 +46,8 @@ const EventForm = ({
 }) => {
   //useState's
   const [files, setFiles] = useState<File[]>([]);
+  const [startDate, setStartDate] = useState<Date>();
+  const [endDate, setEndDate] = useState<Date>();
   // 1. Define your form.
   const form = useForm<z.infer<typeof eventFormSchema>>({
     resolver: zodResolver(eventFormSchema),
@@ -51,6 +60,7 @@ const EventForm = ({
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+  const addNewCategoryOnClick = () => {};
   return (
     // <Form {...form}>
     //   <form
@@ -110,17 +120,104 @@ const EventForm = ({
               <SelectItem value="blueberry">Blueberry</SelectItem>
               <SelectItem value="grapes">Grapes</SelectItem>
               <SelectItem value="pineapple">Pineapple</SelectItem>
+              <AlertDialogDemo />
+              {/* <button
+                value="pineapple"
+                className="ml-3 mb-3 mt-1.5 transition-all duration-200 hover:bg-[#6C757D] hover:text-white px-3 py-1.5
+                 rounded-md border border-[#6C757D] text-black text-sm"
+              >
+                + Add New Category
+              </button> */}
             </SelectGroup>
           </SelectContent>
         </Select>
       </div>
-      <Textarea
-        placeholder="Description"
-        className="min-h-[17rem] rounded-xl"
-      />
-      <div className="border-2 border-black">
-        <FileUploader imageUrl="" setFiles={() => {}} />
+      <div className="wrapper grid gap-5 border-2 sm:grid-cols-2 md:">
+        <Textarea
+          placeholder="Description"
+          className="min-h-[17rem] rounded-xl"
+        />
+        <div className="border-2ff border-black">
+          {files.length == 0 ? (
+            <FileUploader imageUrl="" setFiles={() => {}} />
+          ) : (
+            <h1>Yessss</h1>
+          )}
+        </div>
       </div>
+      <div className="wrapper">
+        <InputWithIcon placeHolder="Event location or Online" />
+      </div>
+
+      <div className="wrapper grid gap-5 sm:grid-cols-2">
+        <InputWithIcon
+          icon={calender}
+          placeHolder="Start Date"
+          width={20}
+          hight={20}
+        >
+          <DatePicker
+            selected={startDate}
+            dateFormat="dd/MM/yyyy h:mm a"
+            onChange={(date) => {
+              console.log(date);
+              if (!date) setEndDate(undefined);
+              setStartDate(date as Date);
+            }}
+            showTimeSelect
+            className="bg-transparent w-full outline-none text-sm"
+            placeholderText="Start Date"
+          />
+        </InputWithIcon>
+        <InputWithIcon
+          icon={calender}
+          placeHolder="End Date"
+          width={20}
+          hight={20}
+        >
+          <DatePicker
+            selected={endDate}
+            dateFormat="dd/MM/yyyy h:mm a"
+            onChange={(date) => {
+              console.log(date);
+              setEndDate(date as Date);
+            }}
+            showTimeSelect
+            className={`bg-transparent w-full outline-none text-sm ${
+              !startDate ? "cursor-not-allowed" : null
+            }`}
+            placeholderText="End Date"
+            disabled={!startDate ? true : false}
+          />
+        </InputWithIcon>
+      </div>
+      <div className="wrapper grid gap-5 sm:grid-cols-2">
+        <InputWithIcon
+          icon={priceIcon}
+          typeInput="number"
+          width={20}
+          hight={20}
+          placeHolder="Price"
+        >
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder="Price"
+            className="bg-transparent w-full outline-none text-sm"
+          />
+          <div className="flex items-center border-2f min-w-30 border-black">
+            <span className="text-sm min-w-20 border-2ff border-blackff">
+              Free Ticket
+            </span>
+            <input type="checkbox" name="" id="" />
+          </div>
+        </InputWithIcon>
+        <InputWithIcon icon={urlIcon} width={24} hight={24} placeHolder="URL" />
+      </div>
+      <Button className="w-full max-w-[15rem] mx-auto rounded-full">
+        Create Event
+      </Button>
     </div>
   );
 };
